@@ -22,6 +22,7 @@
 	padding:2em;
 	background:red;
 	justify-content:center;
+	width:100vw;
 }
 
 .header~.flex_container{
@@ -35,11 +36,11 @@
 	background:magenta;
 	font: normal normal normal 16px/30px Georgia, serif; 
 	color:white;
-	border-radius:25%;
+	border-radius:2em;
 }
 
 div{
-	font-size: 16px;
+	font-size: 1.2rem;
 	/*ems scale from font size, makes sense as the font is the most atomic element of html*/
 	padding: 3em;
 }
