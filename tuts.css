@@ -9,21 +9,33 @@
 	align-self:center;
 }
 
-.wrapper{
+.dense_grid_container{
 	display:grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
-	grid-auto-rows: minmax(100px, auto);
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 8fr;
+	gap: 1em;
 }
 
-.one{
-	grid-column: 1/3;
-	grid-row: 1;
+.dense_grid_container>.header{
+	display:flex;
+	grid-column:1/4;
+	padding:2em;
+	background:red;
+	justify-content:center;
 }
 
-.two{
-	grid-column: 2/4;
-	grid-row: 1/3;
+.header~.flex_container{
+	display:flex;
+	column-gap:2rem;
+	justify-content:space-between;
+	grid-column:2;
+}
+/*All descendants to a flex_container class whose sibling is a header class*/
+.header~.flex_container>*{
+	background:magenta;
+	font: normal normal normal 16px/30px Georgia, serif; 
+	color:white;
+	border-radius:25%;
 }
 
 div{
