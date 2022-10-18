@@ -1,4 +1,7 @@
 /*Cascade properties*/
+:root {
+	--lightmag: #ff99ff;
+}
 .box{
 	display:flex;
 	align-items: flex-start;
@@ -9,11 +12,17 @@
 	align-self:center;
 }
 
+/*unitless, calculate from local val rather than inherit*/
+.intro{
+	line-height:1.2;
+}
+
 .dense_grid_container{
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 8fr;
 	gap: 1em;
+	padding:0;
 }
 
 .dense_grid_container>.header{
@@ -33,7 +42,7 @@
 }
 /*All descendants to a flex_container class whose sibling is a header class*/
 .header~.flex_container>*{
-	background:magenta;
+	background: var(--lightmag, black);
 	font: normal normal normal 16px/30px Georgia, serif; 
 	color:white;
 	border-radius:2em;
